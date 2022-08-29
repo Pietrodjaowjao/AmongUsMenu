@@ -38,6 +38,7 @@ namespace GameTab {
 			
 			if (ImGui::Button("Set Color") && (IsInGame() || IsInLobby()))
 			{
+				State.SelectedColorId = GetRandomColorId();
 				bool colorAvailable = true;
 
 				for (PlayerControl* player : GetAllPlayerControl())
